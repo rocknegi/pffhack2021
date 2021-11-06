@@ -52,9 +52,9 @@ export const parkingData = [
     id: 5,
     title: 'Pfaff Parkplatz 2',
     totalChargingSpots: 10,
-    availableChargingSpots: 0,
+    availableChargingSpots: 10,
     totalParkingSpots: 100,
-    avaialbleParkingSpots: 0,
+    avaialbleParkingSpots: 40,
     coords: {
       latitude: 49.43557684610906,
       longitude: 7.749524176662083,
@@ -76,9 +76,9 @@ export const parkingData = [
     id: 7,
     title: 'Pfaff Parkplatz 4',
     totalChargingSpots: 10,
-    availableChargingSpots: 0,
+    availableChargingSpots: 30,
     totalParkingSpots: 100,
-    avaialbleParkingSpots: 0,
+    avaialbleParkingSpots: 2,
     coords: {
       latitude: 49.436429274582515,
       longitude: 7.750964092266555,
