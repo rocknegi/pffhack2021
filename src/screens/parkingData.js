@@ -35,4 +35,55 @@ export const parkingData = [
       longitude: 7.752496004104614,
     },
   },
+ {
+    id: 4,
+    title: 'Pfaff Parkplatz 1',
+    totalChargingSpots: 10,
+    availableChargingSpots: 0,
+    totalParkingSpots: 100,
+    avaialbleParkingSpots: 0,
+    coords: {
+      latitude: 49.436293284394566,
+      longitude: 7.75362007558403,
+    },
+  },  
+
+ {
+    id: 5,
+    title: 'Pfaff Parkplatz 2',
+    totalChargingSpots: 10,
+    availableChargingSpots: 0,
+    totalParkingSpots: 100,
+    avaialbleParkingSpots: 0,
+    coords: {
+      latitude: 49.43557684610906,
+      longitude: 7.749524176662083,
+    },
+  }, 
+   {
+    id: 6,
+    title: 'Pfaff Parkplatz 3',
+    totalChargingSpots: 10,
+    availableChargingSpots: 0,
+    totalParkingSpots: 100,
+    avaialbleParkingSpots: 0,
+    coords: {
+      latitude: 49.438021233486005,
+      longitude: 7.753381500264688,
+    },
+  }, 
+   {
+    id: 7,
+    title: 'Pfaff Parkplatz 4',
+    totalChargingSpots: 10,
+    availableChargingSpots: 0,
+    totalParkingSpots: 100,
+    avaialbleParkingSpots: 0,
+    coords: {
+      latitude: 49.436429274582515,
+      longitude: 7.750964092266555,
+    },
+  }
+
+
 ];
