@@ -9,12 +9,7 @@ const BottomNavigationBar = () => {
   const [value, setValue] = React.useState('key1');
   const Home = () => {
     return (
-      <View
-        style={{
-          margin: 10,
-          display: 'flex',
-          justifyContent: 'center',
-        }}>
+      <View style={{margin: 10}}>
         <Text style={{fontSize: 20, fontWeight: 'bold'}}>
           Means Of transport
         </Text>
@@ -32,18 +27,8 @@ const BottomNavigationBar = () => {
           placeholder="Kilometers"
           style={{backgroundColor: '#e4e4e4', paddingLeft: '5%'}}
         />
-        <TouchableOpacity
-          style={{
-            width: 100,
-            height: 40,
-            backgroundColor: '#00E676',
-            borderRadius: 6,
-            justifyContent: 'center',
-            alignSelf: 'center',
-            marginTop: 20,
-            elevation: 3,
-          }}>
-          <Text style={{textAlign: 'center'}}>Calculate</Text>
+        <TouchableOpacity>
+          <Text>Calculate</Text>
         </TouchableOpacity>
       </View>
     );

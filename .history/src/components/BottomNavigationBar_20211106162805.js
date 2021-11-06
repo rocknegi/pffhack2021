@@ -34,16 +34,15 @@ const BottomNavigationBar = () => {
         />
         <TouchableOpacity
           style={{
-            width: 100,
-            height: 40,
+            width: '30%',
+            height: 35,
             backgroundColor: '#00E676',
             borderRadius: 6,
             justifyContent: 'center',
-            alignSelf: 'center',
             marginTop: 20,
             elevation: 3,
           }}>
-          <Text style={{textAlign: 'center'}}>Calculate</Text>
+          <Text>Calculate</Text>
         </TouchableOpacity>
       </View>
     );

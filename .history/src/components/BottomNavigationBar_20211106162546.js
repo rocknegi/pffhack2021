@@ -1,6 +1,6 @@
 import {Picker} from '@react-native-picker/picker';
 import React, {useState} from 'react';
-import {Text, View, TextInput, TouchableOpacity} from 'react-native';
+import {Text, View, TextInput} from 'react-native';
 import {BottomNavigation} from 'react-native-paper';
 import Carpooling from '../screens/Carpooling';
 import ParkingPlaces from '../screens/ParkingPlaces';
@@ -9,12 +9,7 @@ const BottomNavigationBar = () => {
   const [value, setValue] = React.useState('key1');
   const Home = () => {
     return (
-      <View
-        style={{
-          margin: 10,
-          display: 'flex',
-          justifyContent: 'center',
-        }}>
+      <View style={{margin: 10}}>
         <Text style={{fontSize: 20, fontWeight: 'bold'}}>
           Means Of transport
         </Text>
@@ -30,21 +25,8 @@ const BottomNavigationBar = () => {
         <Text style={{fontSize: 20, fontWeight: 'bold'}}>Enter Distance</Text>
         <TextInput
           placeholder="Kilometers"
-          style={{backgroundColor: '#e4e4e4', paddingLeft: '5%'}}
+          style={{backgroundColor: '#e4e4e4'}}
         />
-        <TouchableOpacity
-          style={{
-            width: 100,
-            height: 40,
-            backgroundColor: '#00E676',
-            borderRadius: 6,
-            justifyContent: 'center',
-            alignSelf: 'center',
-            marginTop: 20,
-            elevation: 3,
-          }}>
-          <Text style={{textAlign: 'center'}}>Calculate</Text>
-        </TouchableOpacity>
       </View>
     );
   };
