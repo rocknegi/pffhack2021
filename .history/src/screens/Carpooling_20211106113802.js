@@ -19,7 +19,6 @@ const Carpooling = () => {
       <Text>{user.name}</Text>
       <Text>{user.age}Jahre</Text>
       <Text>{user.rating}</Text>
-      <Text>{user.noOfVotes}</Text>
     </View>
   );
   return (

@@ -10,16 +10,9 @@ import {
 import {CarpoolingData} from './CarpoolingData';
 
 const Carpooling = () => {
-  const renderItem = ({item: {id, time, to, from, availSpace, user}}) => (
+  const renderItem = ({item: {id, time}}) => (
     <View>
       <Text>{time}Uhr</Text>
-      <Text>{from}</Text>
-      <Text>{to}</Text>
-      <Text>{availSpace}</Text>
-      <Text>{user.name}</Text>
-      <Text>{user.age}Jahre</Text>
-      <Text>{user.rating}</Text>
-      <Text>{user.noOfVotes}</Text>
     </View>
   );
   return (

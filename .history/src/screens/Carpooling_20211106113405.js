@@ -10,16 +10,9 @@ import {
 import {CarpoolingData} from './CarpoolingData';
 
 const Carpooling = () => {
-  const renderItem = ({item: {id, time, to, from, availSpace, user}}) => (
+  const renderItem = ({id}) => (
     <View>
-      <Text>{time}Uhr</Text>
-      <Text>{from}</Text>
-      <Text>{to}</Text>
-      <Text>{availSpace}</Text>
-      <Text>{user.name}</Text>
-      <Text>{user.age}Jahre</Text>
-      <Text>{user.rating}</Text>
-      <Text>{user.noOfVotes}</Text>
+      <Text>{id}</Text>
     </View>
   );
   return (
@@ -32,11 +25,7 @@ const Carpooling = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.listContainer}>
-        <FlatList
-          data={CarpoolingData}
-          renderItem={renderItem}
-          keyExtractor={item => item.id}
-        />
+        <FlatList data={CarpoolingData} renderItem={renderItem} />
       </View>
     </View>
   );
