@@ -60,7 +60,7 @@ export default function ParkingPlaces() {
           </Marker>
         ),
       )}
-      {CarpoolingData.map(({id, time, from, to, availSpace, price, coords}) => (
+      {CarpoolingData.map(({id, time, from, to, available, price, coords}) => (
         <Marker
           // pinColor={
           //   avaialbleParkingSpots || availableChargingSpots
@@ -70,33 +70,23 @@ export default function ParkingPlaces() {
           key={id}
           title={'g'}
           coordinate={coords}
-          image={carImage}
           onSelect={e => log('onSelect', e)}
           onPress={e => log('onPress', e)}>
+          <Image
+            source={require('../assets/images/car.png')}
+            style={{width: 30, height: 30, backgroundColor: '#ffffcf'}}
+            resizeMode="cover"
+          />
           <Callout>
-            <View
-              style={{
-                display: 'flex',
-                flex: 1,
-                height: '100%',
-                justifyContent: 'center',
-              }}>
-              <Text style={styles.markerTitle}>
-                {from} -- {to}
-              </Text>
+            {/* <View style={{height: '100%', width: '100%'}}>
+              <Text style={styles.markerTitle}>{title}</Text>
               <Text style={styles.markerBody}>
-                Available Places: {availSpace} {'\n'}
-                Price: €{price}/perosn
+                Available Charging Spots: {availableChargingSpots} /{' '}
+                {totalChargingSpots} {'\n'}
+                Available Parking Spots: {avaialbleParkingSpots} /{' '}
+                {totalParkingSpots}
               </Text>
-              <Text
-                style={{
-                  textAlign: 'right',
-                  textDecorationLine: 'underline',
-                  color: '#00E676',
-                }}>
-                More Details
-              </Text>
-            </View>
+            </View> */}
           </Callout>
         </Marker>
       ))}

@@ -26,7 +26,7 @@ export const CarpoolingData = [
     availSpace: 1,
     price: 25,
     user: {
-      name: 'Eduard',
+      name: 'Rohit',
       age: 23,
       rating: '5.0',
       noOfVotes: 10,
@@ -45,7 +45,7 @@ export const CarpoolingData = [
     availSpace: 3,
     price: 10,
     user: {
-      name: 'Matthias',
+      name: 'Rohit',
       age: 23,
       rating: '5.0',
       noOfVotes: 10,
@@ -64,7 +64,7 @@ export const CarpoolingData = [
     availSpace: 3,
     price: 10,
     user: {
-      name: 'Pattrick',
+      name: 'Rohit',
       age: 23,
       rating: '5.0',
       noOfVotes: 10,

@@ -60,7 +60,7 @@ export default function ParkingPlaces() {
           </Marker>
         ),
       )}
-      {CarpoolingData.map(({id, time, from, to, availSpace, price, coords}) => (
+      {CarpoolingData.map(({id, time, from, to, available, price, coords}) => (
         <Marker
           // pinColor={
           //   avaialbleParkingSpots || availableChargingSpots
@@ -70,34 +70,25 @@ export default function ParkingPlaces() {
           key={id}
           title={'g'}
           coordinate={coords}
-          image={carImage}
+          // image={carImage}
           onSelect={e => log('onSelect', e)}
           onPress={e => log('onPress', e)}>
-          <Callout>
-            <View
-              style={{
-                display: 'flex',
-                flex: 1,
-                height: '100%',
-                justifyContent: 'center',
-              }}>
-              <Text style={styles.markerTitle}>
-                {from} -- {to}
-              </Text>
-              <Text style={styles.markerBody}>
-                Available Places: {availSpace} {'\n'}
-                Price: €{price}/perosn
-              </Text>
-              <Text
-                style={{
-                  textAlign: 'right',
-                  textDecorationLine: 'underline',
-                  color: '#00E676',
-                }}>
-                More Details
-              </Text>
-            </View>
-          </Callout>
+          <>
+            <Image
+              source={require('../assets/images/car.png')}
+              style={{width: 28, height: 28, backgroundColor: '#f0e000'}}
+              resizeMode="cover"
+            />
+            <Callout>
+              <View style={{height: '100%', width: '100%'}}>
+                <Text style={styles.markerTitle}>title</Text>
+                <Text style={styles.markerBody}>
+                  Available Charging Spots: 1 / 10 {'\n'}
+                  Available Parking Spots: 1 / 10
+                </Text>
+              </View>
+            </Callout>
+          </>
         </Marker>
       ))}
     </MapView>

@@ -89,11 +89,7 @@ export default function ParkingPlaces() {
                 Price: €{price}/perosn
               </Text>
               <Text
-                style={{
-                  textAlign: 'right',
-                  textDecorationLine: 'underline',
-                  color: '#00E676',
-                }}>
+                style={{textAlign: 'right', textDecorationLine: 'underline'}}>
                 More Details
               </Text>
             </View>

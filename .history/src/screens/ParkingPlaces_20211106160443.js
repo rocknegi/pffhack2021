@@ -88,14 +88,7 @@ export default function ParkingPlaces() {
                 Available Places: {availSpace} {'\n'}
                 Price: €{price}/perosn
               </Text>
-              <Text
-                style={{
-                  textAlign: 'right',
-                  textDecorationLine: 'underline',
-                  color: '#00E676',
-                }}>
-                More Details
-              </Text>
+              <Text>More Details</Text>
             </View>
           </Callout>
         </Marker>
