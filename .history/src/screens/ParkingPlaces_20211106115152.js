@@ -41,11 +41,11 @@ export default function ParkingPlaces() {
             }
             key={id}
             title={title}
-            // description={`Charging Spots: ${availableChargingSpots}/${totalChargingSpots} Parking Spots: ${avaialbleParkingSpots}/${totalParkingSpots}`}
+            description={`Charging Spots: ${availableChargingSpots}/${totalChargingSpots} Parking Spots: ${avaialbleParkingSpots}/${totalParkingSpots}`}
             coordinate={coords}
             onSelect={e => log('onSelect', e)}
             onPress={e => log('onPress', e)}>
-            <Callout>
+            {/* <Callout>
               <View style={{height: '100%', width: '100%'}}>
                 <Text style={styles.markerTitle}>{title}</Text>
                 <Text style={styles.markerBody}>
@@ -55,7 +55,7 @@ export default function ParkingPlaces() {
                   {totalParkingSpots}
                 </Text>
               </View>
-            </Callout>
+            </Callout> */}
           </Marker>
         ),
       )}

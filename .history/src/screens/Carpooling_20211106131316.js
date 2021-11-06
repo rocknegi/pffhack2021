@@ -7,7 +7,6 @@ import {
   TextInput,
   FlatList,
   Image,
-  ScrollView,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {CarpoolingData} from './CarpoolingData';
@@ -16,7 +15,7 @@ const Carpooling = () => {
   const renderItem = ({
     item: {id, time, to, from, availSpace, user, price},
   }) => (
-    <View id={id}>
+    <>
       <View style={styles.card}>
         <Text style={{fontSize: 18, fontWeight: '500', margin: 5}}>
           {time}Uhr
@@ -29,43 +28,33 @@ const Carpooling = () => {
         </Text>
       </View>
       <View style={styles.userCard}>
-        <View style={{flex: 0.2, marginLeft: 5}}>
+        <View style={{flex: 0.3, marginLeft: 5}}>
           <Image style={styles.userImage} source={{uri: user.img}} />
         </View>
-        <View style={{flex: 0.3, justifyContent: 'flex-start'}}>
-          <Text style={{fontSize: 14, fontWeight: 'bold', textAlign: 'left'}}>
+        <View style={{flex: 0.3}}>
+          <Text style={{fontSize: 14, fontWeight: 'bold'}}>
             {user.name} {user.age}Jahre
           </Text>
           <Text>
-            <Icon name="star" style={{color: '#ef952f'}} />
+            <Icon name="star" />
             {user.rating} * {user.noOfVotes} Votes
           </Text>
         </View>
-        <View style={{flex: 0.4, justifyContent: 'flex-end'}}>
-          <Text style={{textAlign: 'right', color: 'green'}}>
-            {price} €/Person
-          </Text>
+        <View style={{flex: 0.3, justifyContent: 'flex-end'}}>
+          <Text>€{price}/Person</Text>
         </View>
       </View>
-    </View>
+    </>
   );
   return (
     <View style={styles.container}>
       <View style={styles.searchContainer}>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
-          <Icon
-            style={{fontSize: 25, marginRight: 10, color: 'green'}}
-            name="arrow-circle-o-down"
-          />
+          <Icon name="arrow-circle-o-down" />
           <TextInput placeholder="Location" style={styles.textInput} />
         </View>
-        <View style={{flexDirection: 'row', alignItems: 'center'}}>
-          <Icon
-            style={{fontSize: 25, marginRight: 10, color: 'red'}}
-            name="arrow-circle-o-up"
-          />
-          <TextInput placeholder="Destination" style={styles.textInput} />
-        </View>
+        <Icon name="arrow-circle-o-up" />
+        <TextInput placeholder="Destination" style={styles.textInput} />
         <TouchableOpacity style={styles.addButton}>
           <Text style={styles.buttonText}>Search </Text>
         </TouchableOpacity>
@@ -76,7 +65,6 @@ const Carpooling = () => {
           renderItem={renderItem}
           keyExtractor={item => item.id}
           showsVerticalScrollIndicator={false}
-          style={{height: '68%'}}
         />
       </View>
     </View>
@@ -104,14 +92,14 @@ const styles = StyleSheet.create({
   textInput: {
     backgroundColor: '#fafafa',
     height: 50,
-    width: '85%',
+    width: '95%',
     marginTop: 10,
   },
   searchContainer: {
     alignItems: 'center',
     backgroundColor: '#e4e4e4',
     width: '100%',
-    minHeight: 190,
+    minHeight: 200,
     overflow: 'hidden',
     margin: 10,
     borderRadius: 6,

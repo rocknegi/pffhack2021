@@ -54,14 +54,14 @@ const Carpooling = () => {
       <View style={styles.searchContainer}>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <Icon
-            style={{fontSize: 25, marginRight: 10, color: 'green'}}
+            style={{fontSize: 25, margin: 10, color: 'green'}}
             name="arrow-circle-o-down"
           />
           <TextInput placeholder="Location" style={styles.textInput} />
         </View>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <Icon
-            style={{fontSize: 25, marginRight: 10, color: 'red'}}
+            style={{fontSize: 25, margin: 10, color: 'red'}}
             name="arrow-circle-o-up"
           />
           <TextInput placeholder="Destination" style={styles.textInput} />
